@@ -1,0 +1,106 @@
+:root {
+  --col-red: #ef3030;
+  --col-orange: orange;
+  --col-green: #2ecc71;
+  --col-blue: #245ffd;
+  --col-light-red: #fb1f60;
+  --col-black: #1d1d1d;
+  --col-gray: #bfbfbf;
+  --color-btn: #363945;
+
+  --color-green-1: #4bbb7d;
+  --color-orange-2: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+
+  --box-shadow--1: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0 0 8px;
+  --box-shadow--2: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  --box-shadow--3: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #777;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+img,
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.svg__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+/*___________ header __________*/
+.header {
+  display: flex;
+  padding: 1.5rem 2rem;
+  /* background-color: #4bbb7d; */
+  background-color: teal;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  margin-left: 2rem;
+}
+
+.nav__link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #f2f2f2;
+}
+
+.nav__link.active {
+  /* color: var(--color-orange-2); */
+  color: yellow;
+}
+
+.main {
+  padding: 3rem 2rem;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 5rem 2rem;
+}

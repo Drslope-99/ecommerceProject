@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/product.css" />
+  </head>
+  <body>
+    <%- include('../includes/header.ejs')%>
+    <main class="main">
+      <div class="container">
+        <% if(prods.length > 0) {%>
+        <div class="row">
+          <% prods.forEach( product => {%>
+          <div class="col col-1-of-4">
+            <article class="card">
+              <h3 class="card__title"><%= product.title %></h3>
+              <div class="card__image">
+                <img src="<%= product.imageUrl%>" alt="<%= product.title %>" />
+              </div>
+              <div class="card__content">
+                <h3 class="card__price">$<%= product.price %></h3>
+                <p class="card__description"><%= product.description %></p>
+              </div>
+              <div class="card__actions">
+                <%- include('../includes/add-to-cart.ejs',{product: product})%>
+              </div>
+            </article>
+          </div>
+          <% }) %>
+        </div>
+        <% } else {%>
+        <h1>No Products found!</h1>
+        <%}%>
+      </div>
+    </main>
+    <%- include('../includes/footer.ejs')%>
+  </body>
+</html>
